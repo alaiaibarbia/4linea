@@ -47,7 +47,10 @@ def secuenciaValida(secuencia):
 
 secuencia = [1, 2, 3, 1]
 
+tablero = []
 if secuenciaValida(secuencia):
-	dibujarTablero(completarTableroEnOrden(secuencia, tableroVacio))	
+	tablero = completarTableroEnOrden(secuencia)
 else:
 	print("Las columnas deberian ir de 1 al 7")
+
+print(contenidoColumna(2, tablero))
