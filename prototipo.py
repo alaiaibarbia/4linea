@@ -38,7 +38,7 @@ def secuenciaValida(secuencia):
 		return False
 	return True
 
-secuencia = [1, 2, 3, 1, 3, 4]
+secuencia = [1, 2, 3, 1]
 
 if secuenciaValida(secuencia):
 	dibujarTablero(completarTableroEnOrden(secuencia, tableroVacio))	
