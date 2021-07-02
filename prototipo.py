@@ -15,12 +15,19 @@ def contenidoColumna(nro_columna, tablero):
 		columna.append(celda)
 	return columna
 
+def contenidoFila(nro_fila, tablero):
+	fila = []
+	for columna in tablero:_ 
+		celda = columna[nro_fila - 1]
+		fila.append(celda)
+	return fila
+
 def completarTableroEnOrden (secuencia, tablero):
 	for indice, columna in enumerate(secuencia):
 		fichaNumero = 1 + (indice % 2)
 		soltarFichaEnColumna(fichaNumero, columna, tablero)
 	return tablero
-
+ 
 def soltarFichaEnColumna(ficha, columna, tablero):
 	for fila in range (6, 0, -1):
 		if tablero [fila - 1] [columna - 1] == 0:
@@ -28,20 +35,25 @@ def soltarFichaEnColumna(ficha, columna, tablero):
 		   return
 
 def dibujarTablero(tablero):
+	print('')
 	for fila in tablero:
 		for celda in fila:
 			if celda == 0:
-			   print('  ', end= '') 
-			else: 
+			   print('0', end= '')
+			else:
+				if celda == 1:
 			   print(' %s ' % celda, end= '')
-	    print('')
+			else:
+				print(' %s ' %celda, end='')
+		printf('')
+	   print('')
 
 def contenidoFila(nroFila, tablero):
 	return tablero[fila - 1]
 
 def secuenciaValida(secuencia):
 	for columna in secuencia:
-		if columna < 1 or columna > 7
+		if columna < 1 or columna > 7:
 		return False
 	return True
 
@@ -54,3 +66,5 @@ else:
 	print("Las columnas deberian ir de 1 al 7")
 
 print(contenidoColumna(2, tablero))
+
+return
